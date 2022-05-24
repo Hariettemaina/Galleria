@@ -3,5 +3,21 @@
 {% block content %}
 
 <p>Hello World!</p>
+<div class="col-10">
+{% for image in images %}
 
+<div class="card" style="width: 18rem;">
+    <img src="{{ image.image.url }}" class="card-img-top" alt="{{ image.id }}">
+    <div class="card-body">
+      <p class="card-text">{{ image.title }}</p>
+    </div>
+</div>
+
+</div>
+{% empty %}
+<div class="col-10">
+  <h2 class="text-center">No Images Yet</h2>
+</div>
+{% endfor %}
+</div>
 {% endblock %}
