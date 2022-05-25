@@ -9,8 +9,8 @@ def homepage(request):
 
 def search_results(request):
 
-    if 'image' in request.GET and request.GET["image"]:
-        search_term = request.GET.get("image")
+    if 'images' in request.GET and request.GET["images"]:
+        search_term = request.GET.get("images")
         searched_images = Images.search_by_title(search_term)
         message = f"{search_term}"
 

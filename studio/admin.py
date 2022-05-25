@@ -3,7 +3,7 @@ from django.contrib import admin
 # Register your models here.
 from .models import Photographer,Images,tags
 
-# Register your models here.
+#Register your models here.
 
 class ArticleAdmin(admin.ModelAdmin):
     filter_horizontal =('tags',)
